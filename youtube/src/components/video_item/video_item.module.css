@@ -9,7 +9,7 @@
     border : 2px solid red;
     cursor: pointer;
     transition: transform 250ms ease-in;
-    box-shadow:  7px 12px 5px rgba(0,0,0,0.72);
+    box-shadow:  7px 12px 5px gray;
 }
 
 .video:hover{

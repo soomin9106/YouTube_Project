@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
-import './app.css';
+import styles from './app.module.css';
 import VideoList from './components/video_list/video_list';
+import Search_header from './components/search_header/search_header';
 
 function App() {
   const [videos,setVideos] = useState([]);
@@ -16,7 +17,10 @@ function App() {
       .catch(error => console.log('error', error));
   },[]);
   return (
-    <VideoList videos={videos}/>  
+    <div className={styles.app}>
+      <Search_header /> 
+      <VideoList videos={videos}/>  
+    </div>
   );
 }
 

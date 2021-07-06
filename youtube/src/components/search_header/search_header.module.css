@@ -1,0 +1,45 @@
+.header{
+    display: flex;
+    height: 4rem;
+    padding : 0.8em 1em;
+    background: #292929;
+    color: snow;
+    font-family: 'Ubuntu';
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    color:snow;
+    margin-right: 1em;
+}
+
+.img{
+    padding-right: 0.5em;
+    transition: transform 250ms ease-in;
+}
+
+.img:hover{
+    transform: scaleX(1.1);
+}
+
+.input{
+    flex-basis: 100%;
+    font-size: 1.2em;
+    outline: 0; 
+}
+
+.btn{
+    background-color: darkgray;
+    transition: transform 250ms ease-in;
+}
+
+.btn:hover{
+    transform: scale(1.02);
+}
+
+.btnImg{
+    padding: 0.5em 0.2em;
+    height: 100%;
+}
+
