@@ -3,11 +3,15 @@ import styles from './search_header.module.css';
 import LogoImg from 'C:/Front-End/YouTube_Project/youtube/src/components/images/logo.png';
 import searchImg from 'C:/Front-End/YouTube_Project/youtube/src/components/images/search.png'
 
-const Search_header = ({onSearch}) => {
+const Search_header = ({onSearch,onGoToStart}) => {
     const inputRef = useRef();
     const handleSearch = () => {
         const value = inputRef.current.value;
         onSearch(value);
+    }
+
+    const GoToStart = () =>{
+        onGoToStart();
     }
 
     const onClick = () => {
@@ -23,7 +27,7 @@ const Search_header = ({onSearch}) => {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <img className={styles.img} alt="logo" src={LogoImg} />
+                <button onClick={GoToStart}><img className={styles.img} alt="logo" src={LogoImg} /></button>
                 <h1 className={styles.title}>YouTube</h1>
             </div>
             <input ref={inputRef} className={styles.input} type="search" placeholder="Search..." onKeyPress={onKeyPress} />

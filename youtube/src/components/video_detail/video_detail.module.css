@@ -1,0 +1,14 @@
+.detail{
+    padding: 0.2em;
+}
+
+.title{
+    font-family:'Ubuntu' ;
+    font-size: 0.9rem;
+}
+
+.description{
+    font-family:'Ubuntu' ;
+    white-space: pre-wrap;
+}
+
