@@ -8,6 +8,7 @@ const VideoItem = ({video : {snippet}}) => (
         <div className={styles.metadata}>
             <p className={styles.title}>{snippet.title}</p>
             <p className={styles.channel}>{snippet.channelTitle}</p>
+            <p className={styles.publishedAt}>{snippet.publishedAt}</p>
         </div>
        </div>
    </li>

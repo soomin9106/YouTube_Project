@@ -32,7 +32,8 @@
     font-family: 'Ubuntu';
 }
 
-.channel{
+.channel,
+.publishedAt{
     font-size : 0.5rem;
     color : gray;
 }
