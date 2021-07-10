@@ -24,6 +24,7 @@ function App({ youtube }) {
   };
 
   const goToStart = () => {
+    setSelectedVideo(null);
     youtube
     .mostPopular()
     .then(videos => setVideos(videos));

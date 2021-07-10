@@ -44,3 +44,13 @@
     font-size : 0.5rem;
     color : gray;
 }
+
+
+/* For below 768px screen width */
+@media screen and (max-width:768px){
+    .container.grid{
+        width :100%;
+    }
+
+}
+
