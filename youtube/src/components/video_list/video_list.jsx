@@ -1,5 +1,4 @@
 import React from 'react';
-import VideoDetail from '../video_detail/video_detail';
 import VideoItem from '../video_item/video_item';
 import styles from './video_list.module.css';
 

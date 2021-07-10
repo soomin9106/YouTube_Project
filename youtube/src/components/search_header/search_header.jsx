@@ -1,9 +1,9 @@
-import React, {useRef} from 'react';
+import React, {memo, useRef} from 'react';
 import styles from './search_header.module.css';
 import LogoImg from 'C:/Front-End/YouTube_Project/youtube/src/components/images/logo.png';
 import searchImg from 'C:/Front-End/YouTube_Project/youtube/src/components/images/search.png'
 
-const Search_header = ({onSearch,onGoToStart}) => {
+const SearchHeader = memo(({onSearch,onGoToStart}) => {
     const inputRef = useRef();
     const handleSearch = () => {
         const value = inputRef.current.value;
@@ -34,6 +34,6 @@ const Search_header = ({onSearch,onGoToStart}) => {
             <button className={styles.btn} type="submit" onClick={onClick}><img className={styles.btnImg} alt="search" src={searchImg}/></button>
         </header>
     );
-}
+});
 
-export default Search_header;
+export default SearchHeader;
