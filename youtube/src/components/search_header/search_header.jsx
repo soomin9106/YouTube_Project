@@ -28,7 +28,6 @@ const Search_header = ({onSearch,onGoToStart}) => {
         <header className={styles.header}>
             <div className={styles.logo}>
                 <button onClick={GoToStart}><img className={styles.img} alt="logo" src={LogoImg} /></button>
-                <button classNamae={styles.logoBtn} onClick={GoToStart}><img className={styles.img} alt="logo" src={LogoImg} /></button>
                 <h1 className={styles.title}>YouTube</h1>
             </div>
             <input ref={inputRef} className={styles.input} type="search" placeholder="Search..." onKeyPress={onKeyPress} />
