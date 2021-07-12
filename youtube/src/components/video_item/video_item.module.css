@@ -13,7 +13,7 @@
 .video{
     display: flex;
     align-items: center;
-    border : 2px solid red;
+    border : 2px solid transparent;
     cursor: pointer;
     transition: transform 250ms ease-in;
     box-shadow:  7px 12px 5px gray;

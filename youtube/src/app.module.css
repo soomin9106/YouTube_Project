@@ -2,6 +2,16 @@
     max-width: 80rem;
 }
 
+.light{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.dark{
+    background-color: black;
+    color: whitesmoke;
+}
+
 .content{
     display: flex;
 }

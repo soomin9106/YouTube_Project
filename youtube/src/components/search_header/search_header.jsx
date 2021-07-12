@@ -3,7 +3,7 @@ import styles from './search_header.module.css';
 import LogoImg from 'C:/Front-End/YouTube_Project/youtube/src/components/images/logo.png';
 import searchImg from 'C:/Front-End/YouTube_Project/youtube/src/components/images/search.png'
 
-const SearchHeader = memo(({onSearch,onGoToStart}) => {
+const SearchHeader = memo(({onSearch,onGoToStart,onDark,onLight}) => {
     const inputRef = useRef();
     const handleSearch = () => {
         const value = inputRef.current.value;
@@ -24,6 +24,14 @@ const SearchHeader = memo(({onSearch,onGoToStart}) => {
         }
     };
 
+    const dark = () => {
+        onDark();
+    };
+
+    const light = () => {
+        onLight();
+    }
+
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
@@ -32,6 +40,8 @@ const SearchHeader = memo(({onSearch,onGoToStart}) => {
             </div>
             <input ref={inputRef} className={styles.input} type="search" placeholder="Search..." onKeyPress={onKeyPress} />
             <button className={styles.btn} type="submit" onClick={onClick}><img className={styles.btnImg} alt="search" src={searchImg}/></button>
+            <button className={styles.toggleBtn} onClick={dark}><i class="fas fa-moon"></i></button>
+            <button className={styles.toggleBtn} onClick={light}><i class="fas fa-sun"></i></button>
         </header>
     );
 });

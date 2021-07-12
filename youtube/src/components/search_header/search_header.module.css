@@ -49,6 +49,12 @@ button{
     transform: scale(1.02);
 }
 
+.toggleBtn{
+    color : whitesmoke;
+    padding-left: 16px;
+    font-size: 28px;
+}
+
 .btnImg{
     padding: 0.5em 0.2em;
     height: 100%;
