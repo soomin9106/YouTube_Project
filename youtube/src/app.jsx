@@ -23,13 +23,12 @@ function App({ youtube }) {
      setVideos(videos));
    },[youtube]);
 
-  const goToStart = useCallback(
-    () => {
-      setSelectedVideo(null);
-      youtube
-      .mostPopular()
-      .then(videos => setVideos(videos));
-    },[youtube]);
+  const goToStart =  () => {
+    setSelectedVideo(null);
+    youtube
+    .mostPopular()
+    .then(videos => setVideos(videos));
+  }
 
   const darkMode = () => {
     themeMode = styles.dark;
