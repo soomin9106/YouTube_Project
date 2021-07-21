@@ -23,12 +23,6 @@ function App({ youtube }) {
      setVideos(videos));
    },[youtube]);
 
-  const goToStart =  () => {
-    setSelectedVideo(null);
-    youtube
-    .mostPopular()
-    .then(videos => setVideos(videos));
-  }
 
   const darkMode = () => {
     themeMode = styles.dark;
@@ -48,7 +42,7 @@ function App({ youtube }) {
 
   return (
     <div className={`${styles.app} ${themeMode}`}>
-      <SearchHeader onSearch={search} onGoToStart={goToStart} onDark={darkMode} onLight={ligthMode} /> 
+      <SearchHeader onSearch={search}  onDark={darkMode} onLight={ligthMode} /> 
       <section className={styles.content}>
        {selectedVideo && <div className={styles.detail}>{<VideoDetail video={selectedVideo}/>}</div>}
        <div className={styles.list}><VideoList videos={videos} onVideoClick={selectVideo} display={selectedVideo ? 'list':'grid'}/></div>
