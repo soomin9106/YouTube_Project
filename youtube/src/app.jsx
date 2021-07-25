@@ -1,4 +1,10 @@
 import React,{useState,useEffect,useCallback} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import styles from './app.module.css';
 import VideoList from './components/video_list/video_list';
 import SearchHeader from './components/search_header/search_header';
@@ -41,13 +47,27 @@ function App({ youtube }) {
   },[youtube]);
 
   return (
-    <div className={`${styles.app} ${themeMode}`}>
-      <SearchHeader onSearch={search}  onDark={darkMode} onLight={ligthMode} /> 
-      <section className={styles.content}>
-       {selectedVideo && <div className={styles.detail}>{<VideoDetail video={selectedVideo}/>}</div>}
-       <div className={styles.list}><VideoList videos={videos} onVideoClick={selectVideo} display={selectedVideo ? 'list':'grid'}/></div>
-      </section>
-    </div>
+    <Router>
+      <Switch>
+       <Route path='/' exact>
+        <div className={`${styles.app} ${themeMode}`}>
+          <SearchHeader onSearch={search} onDark={darkMode} onLight={ligthMode} /> 
+          <section className={styles.content}>
+            <div className={styles.list}><VideoList videos={videos} onVideoClick={selectVideo} display={'grid'}/></div>
+          </section>
+        </div>
+       </Route>
+       <Route path="/detail">
+        <div className={`${styles.app} ${themeMode}`}>
+          <SearchHeader onSearch={search} onDark={darkMode} onLight={ligthMode} /> 
+          <section className={styles.content}>
+            {selectedVideo && <div className={styles.detail}>{<VideoDetail video={selectedVideo}/>}</div>}
+            <div className={styles.list}><VideoList videos={videos} onVideoClick={selectVideo} display={selectedVideo ? 'list':'grid'}/></div>
+          </section>
+        </div>
+       </Route>
+     </Switch>
+    </Router>
   );
 }
 
